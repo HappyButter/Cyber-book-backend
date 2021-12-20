@@ -1,0 +1,3 @@
+CREATE CONSTRAINT constraint_user_email FOR (u:User) REQUIRE u.email IS UNIQUE
+
+CREATE CONSTRAINT constraint_book_ISBN FOR (b:Book) REQUIRE b.ISBN IS UNIQUE
