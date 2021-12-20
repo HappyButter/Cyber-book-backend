@@ -80,8 +80,8 @@ class BookController {
 				MATCH (a:Author)-[:WROTE]->(b:Book) 
 				WITH [(b)-[:HAS_GENRE]->(g) WHERE g:Genre | g.name] AS genres, b, a 
 				ORDER BY b.rate DESC
-				RETURN collect({author: a.name, book: b, genres: genres})
 				LIMIT 6
+				RETURN collect({author: a.name, book: b, genres: genres})
 				`);
 
 			const booksMapped = bestBooks.records[0]._fields[0].map(book => ({
