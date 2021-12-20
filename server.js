@@ -17,8 +17,7 @@ app.get('/', (req, res) => {
   res.send("Works");
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server listening`);
-  console.log(`Link: http://localhost:${port}`);
 })
 
