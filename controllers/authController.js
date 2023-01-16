@@ -48,6 +48,9 @@ class AuthController {
 			}
 
 			const returnedUserFields = user.records[0]._fields;
+			
+			console.log(returnedUserFields);
+
 			const userMapped = {
 				id: returnedUserFields[0],
 				firstName: returnedUserFields[1],
